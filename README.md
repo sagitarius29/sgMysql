@@ -30,6 +30,9 @@ CONSUTAS MYSQL
 =========
 Guardar Datos
 ```php
+require_once('sgMysql.php');
+require_once('usuario.php');
+
 $usuario = new usuario();
 $usuario->nombre = 'Adolfo';
 $usuario->apellidos = 'Cuadros';
@@ -38,6 +41,9 @@ $usuario->Save();
 
 Seleccionar
 ```php
+require_once('sgMysql.php');
+require_once('usuario.php');
+
 $usuario = new usuario();
 $usuario->Where('id','=',2);
 $usuario->Select('nombre', 'apellido');
@@ -48,6 +54,9 @@ while ($obj = $usuarios->result->fetch_object()) {
 
 Modificar Datos
 ```php
+require_once('sgMysql.php');
+require_once('usuario.php');
+
 $usuario = new usuario();
 $usuario->nombre = 'Nuevo Nombre';
 $usuario->Where('id','=',1);
@@ -56,6 +65,9 @@ $usuario->Update();
 
 Eliminar Datos
 ```php
+require_once('sgMysql.php');
+require_once('usuario.php');
+
 $usuario = new usuario();
 $usuario->id = 3;
 $usuario->Delete();
