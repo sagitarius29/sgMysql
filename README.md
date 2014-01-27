@@ -10,7 +10,7 @@ Uso Basico
 
 usuario.php
 
-<?php
+```php
 class usuario
 {
 	
@@ -24,40 +24,40 @@ class usuario
 			'apellidos'	=>	'VARCHAR(200) NULL'
 			);
 }
-?>
+```
 
 CONSUTAS MYSQL
 =========
 Guardar Datos
-<?php 
+```php
 $usuario = new usuario();
 $usuario->nombre = 'Adolfo';
 $usuario->apellidos = 'Cuadros';
 $usuario->Save();
-?>
+```
 
 Seleccionar
-<?php 
+```php
 $usuario = new usuario();
 $usuario->Where('id','=',2);
 $usuario->Select('nombre', 'apellido');
 while ($obj = $usuarios->result->fetch_object()) {
 	echo 'Nombre y apellidos: '.$obj->nombre.' '.$obj->apellidos;
 }
-?>
+```
 
 Modificar Datos
-<?php
+```php
 $usuario = new usuario();
 $usuario->nombre = 'Nuevo Nombre';
 $usuario->Where('id','=',1);
 $usuario->Update();
-?>
+```
 
 Eliminar Datos
-<?php
+```php
 $usuario = new usuario();
 $usuario->id = 3;
 $usuario->Delete();
-?>
+```
 
