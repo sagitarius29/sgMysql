@@ -11,7 +11,7 @@ Uso Basico
 usuario.php
 
 ```php
-class usuario
+class usuario extends sgMysql
 {
 	
 	var $principal_table = __CLASS__;
