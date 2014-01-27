@@ -7,6 +7,9 @@ Esta es una clase para trabajar Mysql como Objeto
 
 Uso Basico
 ===========
+Todas las tablas deberán tener un archivo indicando su estructura, para este ejemplo tendremos la tabla "usuarios" de la siguiente manera
+
+* Cabe resaltar que la clase tiene que tener el nombre de la tabla.
 
 usuario.php
 
@@ -14,10 +17,11 @@ usuario.php
 class usuario extends sgMysql
 {
 	
-	var $principal_table = __CLASS__;
-	var $primary_key 	= 'id';
-	var $engine = 'InnoDB';
+	var $principal_table = __CLASS__; //no cambiar
+	var $primary_key 	= 'id'; // Indicamos la llave primaria
+	var $engine = 'InnoDB'; // Indicamos el tipo de motor
 
+	//Aqui la estructura de la tabla
 	var $structure = array(
 			'id'		=>	'INT NOT NULL AUTO_INCREMENT',
 			'nombre'	=>	'VARCHAR(200) NULL',
@@ -73,3 +77,11 @@ $usuario->id = 3;
 $usuario->Delete();
 ```
 
+Para crear la tabla basta con hacer
+```php
+require_once('sgMysql.php');
+require_once('usuario.php');
+
+$usuario = new usuario();
+$usuario->CreateTable();
+```
