@@ -7,6 +7,15 @@ Esta es una clase para trabajar Mysql como Objeto
 
 Uso Basico
 ===========
+En nuestra clase sgMysql.php cambiar los siguientes datos.
+
+```php
+	private $host = 'localhost'; // El servidor
+	private $user = 'root'; //Usuario
+	private $pass = ''; //Password
+	private $database = 'pruebas'; // Nombre de la base de datos
+```
+
 Todas las tablas deberán tener un archivo indicando su estructura, para este ejemplo tendremos la tabla "usuarios" de la siguiente manera
 
 * Cabe resaltar que la clase tiene que tener el nombre de la tabla.
@@ -85,3 +94,8 @@ require_once('usuario.php');
 $usuario = new usuario();
 $usuario->CreateTable();
 ```
+
+Dudas y Consultas
+====================
+
+Para cualquier duda, consulta o sugerencia envie un mensaje a ronnie.adolfo@gmail.com

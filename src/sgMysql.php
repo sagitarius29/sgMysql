@@ -10,10 +10,12 @@
 */
 class sgMysql
 {
+	//Cambiar los datos
 	private $host = 'localhost';
 	private $user = 'root';
 	private $pass = '';
 	private $database = 'pruebas';
+	//------------------------
 
 	protected $structure;
 	protected $primary_key;
