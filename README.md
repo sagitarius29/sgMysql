@@ -1,3 +1,7 @@
+Atención:
+Este proyecto ha sido abandonado, por lo que no se realizarán actualizaciones, desarrollo detenido.
+
+
 sgMysql
 =======
 
